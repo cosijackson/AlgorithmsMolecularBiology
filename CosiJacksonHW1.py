@@ -45,11 +45,11 @@ import sys, getopt, math, os.path, argparse
 
 def usage():      # print the usage of this application
   
-  print "How to use this program"
-  print "\n python CosiJacksonHW1.py -F <file_name> -S <seq_name> -K <kmer>" 
-  print "\n where -F is the FASTA file ending in .fasta or .txt to be read and analyzed."
-  print "\n where -S is the sequence name in the file to be analyzed."
-  print "\n where -K is the k-mer (ex. ATA) to be matched within the sequence."
+  print("How to use this program")
+  print("python CosiJacksonHW1.py -F <file_name> -S <seq_name> -K <kmer>")
+  print("where -F is the FASTA file ending in .fasta or .txt to be read and analyzed.")
+  print("where -S is the sequence name in the file to be analyzed.")
+  print("where -K is the k-mer (ex. ATA) to be matched within the sequence.")
 
 
 ###################################################################
@@ -138,9 +138,9 @@ def main():
 
 
 
-  #if (len(sys.argv) < 4):   # (0 .. CosiJacksonHW1.py) + (1 .. file) + (2 .. sequence) + (3 .. k-mer) = 4 arguments
-    # usage()
-    # exit (2)                # we have to exit the usage function
+  if (len(sys.argv) < 4):   # (0 .. CosiJacksonHW1.py) + (1 .. file) + (2 .. sequence) + (3 .. k-mer) = 4 arguments
+    usage()
+    exit (2)                # we have to exit the usage function and not continue with the program 
   
 
   # the following matches the sequence name given from the arguments to the sequence 
